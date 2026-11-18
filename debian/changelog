@@ -1,3 +1,9 @@
+dab (3.9.2+s390x1) trixie; urgency=medium
+
+  * allow building s390x appliance templates (s390x port).
+
+ -- Yvan Janssens <yvanj@cyber.gent>  Wed, 18 Nov 2026 08:13:50 +0100
+
 dab (3.9.2) trixie; urgency=medium
 
   * add basic support for building arm64 appliance templates.
