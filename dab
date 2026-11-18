@@ -552,7 +552,7 @@ Appliance names must consist only of lower case letters (a-z), digits (0-9),
 plus (+) and minus (-) signs, and periods (.). They must be at least two
 characters long and must start with an alphanumeric character.
 
-=item B<Architecture:> I<i386|amd64|arm64>
+=item B<Architecture:> I<i386|amd64|arm64|s390x>
 
 Target architecture. Note that dab does not emulate foreign architectures, so
 the build host's architecture has to match the target (for example, build
