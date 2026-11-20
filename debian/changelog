@@ -1,3 +1,10 @@
+dab (3.9.2+s390x2) trixie; urgency=medium
+
+  * use the ports archive (ports.ubuntu.com) as default Ubuntu mirror for
+    architectures other than amd64 and i386.
+
+ -- Yvan Janssens <yvanj@cyber.gent>  Fri, 20 Nov 2026 16:02:36 +0100
+
 dab (3.9.2+s390x1) trixie; urgency=medium
 
   * allow building s390x appliance templates (s390x port).
