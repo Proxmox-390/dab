@@ -836,11 +836,17 @@ sub new {
                 );
         } elsif (lc($suiteinfo->{origin}) eq 'ubuntu') {
             my $comp = "main restricted universe multiverse";
+            # archive.ubuntu.com only carries amd64 and i386, all other architectures (and their
+            # security updates) are served from the ports archive
+            my $mirror =
+                $arch =~ m/^(amd64|i386)$/
+                ? "http://archive.ubuntu.com/ubuntu"
+                : "http://ports.ubuntu.com/ubuntu-ports";
             push @{ $config->{source} },
                 (
-                    "http://archive.ubuntu.com/ubuntu SUITE $comp",
-                    "http://archive.ubuntu.com/ubuntu SUITE-updates $comp",
-                    "http://archive.ubuntu.com/ubuntu SUITE-security $comp",
+                    "$mirror SUITE $comp",
+                    "$mirror SUITE-updates $comp",
+                    "$mirror SUITE-security $comp",
                 );
         } else {
             die "implement me";
